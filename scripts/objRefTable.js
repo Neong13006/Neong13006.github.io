@@ -20,12 +20,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.TextBox,
 		C3.Plugins.Arr,
 		C3.Plugins.MIDI,
+		C3.Behaviors.Fade,
 		C3.Plugins.System.Cnds.OnLayoutStart,
 		C3.Plugins.Audio.Acts.Play,
 		C3.Plugins.Mouse.Acts.SetCursor,
 		C3.Plugins.Browser.Acts.RequestFullScreen,
 		C3.Plugins.Audio.Acts.AddFilterEffect,
 		C3.Plugins.Arr.Acts.SetXY,
+		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.System.Cnds.ForEach,
 		C3.Plugins.NinePatch.Cnds.CompareInstanceVar,
 		C3.Plugins.Sprite.Cnds.CompareInstanceVar,
@@ -34,7 +36,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.NinePatch.Exps.Width,
 		C3.Plugins.NinePatch.Exps.Y,
 		C3.Plugins.NinePatch.Exps.Height,
-		C3.Plugins.Sprite.Acts.SetPos,
 		C3.Plugins.filechooser.Cnds.OnChanged,
 		C3.Plugins.Text.Cnds.CompareInstanceVar,
 		C3.Plugins.TextBox.Cnds.CompareInstanceVar,
@@ -78,7 +79,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Touch.Cnds.OnTouchObject,
 		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.Keyboard.Cnds.OnKey,
-		C3.Plugins.Sprite.Acts.ToggleBoolInstanceVar
+		C3.Plugins.Sprite.Acts.ToggleBoolInstanceVar,
+		C3.Plugins.Sprite.Exps.Height,
+		C3.Plugins.Sprite.Exps.Width,
+		C3.Behaviors.Fade.Acts.SetFadeOutTime,
+		C3.Plugins.System.Acts.GoToLayout
 	];
 };
 self.C3_JsPropNameTable = [
@@ -116,6 +121,9 @@ self.C3_JsPropNameTable = [
 	{Button: 0},
 	{MIDI: 0},
 	{Sprite2: 0},
+	{SIZE: 0},
+	{Fondu: 0},
+	{FOndu: 0},
 	{RatioX: 0},
 	{Musique1: 0},
 	{Musique2: 0},
@@ -151,5 +159,7 @@ self.InstanceType = {
 	Tableau: class extends self.IArrayInstance {},
 	Button: class extends self.ISpriteInstance {},
 	MIDI: class extends self.IInstance {},
-	Sprite2: class extends self.ISpriteInstance {}
+	Sprite2: class extends self.ISpriteInstance {},
+	SIZE: class extends self.ISpriteInstance {},
+	FOndu: class extends self.ISpriteInstance {}
 }
